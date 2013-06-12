@@ -1,0 +1,23 @@
+{
+    "name": "nemesarial/angularjs-bundle",
+    "type": "symfony-bundle",
+    "description": "AngularJs 1.0.7 Bundle for Symfony2",
+    "keywords": ["webfonts", "typography", "css", "bundle"],
+    "homepage": "https://github.com/Nemesarial/QlFontAwesomeBundle",
+    "license": ["MIT"],
+    "authors": [
+        {
+            "name": "Mark Holtzhausen",
+            "email": "nemesarial@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": ">=2.1"
+    },
+    "autoload": {
+        "psr-0": { "Nemesarial\\AngularJsBundle": "" }
+    },
+    "minimum-stability": "dev",
+    "target-dir": "Nemesarial/AngularJsBundle"
+}
