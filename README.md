@@ -37,3 +37,26 @@ public function registerBundles()
 ``` bash
 $ php composer.phar update nemesarial/angularjs-bundle
 ```
+
+### Add Resource to Assetic Configuration
+
+``` yaml
+assetic:
+    # ...
+    assets:
+        # ...
+        angular_js:
+            inputs:
+                - %kernel.root_dir%/../vendor/nemesarial/angularjs-bundle/Nemesarial/AngularJSBundle/Resources/public/js/angular.min.js
+            output: js/angular.js
+        # ...
+```
+
+### Add Javascript Reference to the layout
+``` twig
+{% block javascripts %}
+  {% javascripts '@angular_js' combine=true %}
+     <script src="{{ asset_url }}"></script>
+  {% endjavascripts %}
+{% endblock %}
+```
